@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   place: 'Paris, Île-de-France, France',
   degreeType: 'C',
-  weatherRefreshInterval: 20 * 60
+  weatherRefreshInterval: 20 * 60 * 1000
 };
 
 /*
