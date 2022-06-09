@@ -1,1 +1,167 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'IBM Plex Serif', serif;
+    src: url("assets/fonts/IBMPlex/IBMPlexSerif-Regular.ttf");
+}
+
+@keyframes color-background {
+    0% {
+        background-color: rgba(59, 173, 227, 1);
+    }
+
+    25% {
+        background-color: rgba(87, 111, 230, 1);
+    }
+
+    50% {
+        background-color: rgba(152, 68, 183, 1);
+    }
+
+    75% {
+        background-color: rgba(255, 53, 127, 1);
+    }
+
+    100% {
+        background-color: rgba(59, 173, 227, 1);
+    }
+}
+
+@keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+
+html {
+    font-family: "IBM Plex Serif";
+    font-smooth: always;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+body {
+    transition: background-color 1s;
+    background-image: radial-gradient(ellipse farthest-side at bottom, rgba(255, 255, 255, 0.3), transparent);
+    height: 100vh;
+    overflow: hidden;
+    animation: color-background 150s ease infinite;
+}
+
+/* body::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    background: transparent url("assets/moon.png");
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: top 5% right 10%;
+    content: " ";
+    opacity: 0.3;
+} */
+
+body::after {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("assets/images/clouds.png") repeat;
+    background-size: 1000px 1000px;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    animation: move-background 150s linear infinite;
+    content: " ";
+}
+
+body::before {
+    background: url("assets/images/stars.png") repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+    content: ' ';
+    animation: twinkle 30s alternate infinite,
+        spin 300s linear infinite;
+}
+
+.icon {
+    filter: invert(100%) opacity(80%);
+    min-width: 2em;
+}
+
+
+.box {
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.box .box-title {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.box .row {
+    padding: 0.5em;
+    display: flex;
+    color: white;
+}
+
+.box .row .icon {
+    height: 3em;
+    max-width: 3em;
+}
+
+.box .content {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.box .title {
+    font-size: small;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.box .value {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.box img {
+    color: white;
+}

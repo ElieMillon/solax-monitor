@@ -1,0 +1,13 @@
+
+.solar-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+}
+
+.solar-panel img {
+    width: 100%;
+}

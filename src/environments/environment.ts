@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  place: 'Paris, Île-de-France, France',
+  degreeType: 'C',
+  weatherRefreshInterval: 20 * 60
 };
 
 /*
