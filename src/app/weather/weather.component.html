@@ -1,0 +1,24 @@
+<div class="box">
+    <div class="box-title" i18n>Weather</div>
+    <div class="row row-location">
+        <img src="assets/images/location-outline.svg" class="icon">
+        <div class="content">
+            <span class="title" i18n>Location</span>
+            <span class="value">{{weather?.current?.observationpoint}}</span>
+        </div>
+    </div>
+    <div class="row row-temperature">
+        <img src="assets/images/thermometer-outline.svg" class="icon">
+        <div class="content">
+            <span class="title" i18n>Temperature</span>
+            <span class="value">{{weather?.current?.temperature}}°{{weather?.location?.degreetype}}</span>
+        </div>
+    </div>
+    <div class="row row-wind">
+        <img src="assets/images/wind.svg" class="icon">
+        <div class="content">
+            <span class="title" i18n>Wind</span>
+            <span class="value">{{weather?.current?.windspeed}}</span>
+        </div>
+    </div>
+</div>

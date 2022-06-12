@@ -1,0 +1,18 @@
+[Unit]
+Description=Solax Monitor Service
+After=network-online.target
+ 
+[Service]
+User=pi
+Group=pi
+UMask=007
+ 
+ExecStart=/usr/bin/start-solax-monitor-service.sh
+Restart=on-failure
+Requires=graphical.target
+ 
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=300
+ 
+[Install]
+WantedBy=graphical.target 
