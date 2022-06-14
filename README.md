@@ -1,6 +1,13 @@
 # SolaxMonitor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+~~~
+!!! Currently in Development !!!
+Expect functionalities to be faulties or missing.
+~~~
+
+Solax Monitor is a simple angular application to monitor usage of a Solax Hybrid G4 inverter.
+
+It has been purposed for a Raspberry pi with a 7 inch screen, but should work with others setups.
 
 ## Development server
 
