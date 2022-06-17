@@ -15,4 +15,5 @@ do
 done
 
 # Open browser on first display
-DISPLAY=:0 chromium-browser --kiosk http://localhost:4500
+# We disable security to make requests on solax inverter
+DISPLAY=:0 chromium-browser --kiosk --disable-web-security --disable-site-isolation-for-policy http://localhost:4500

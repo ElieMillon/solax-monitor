@@ -65,6 +65,7 @@ html {
 
 
 body {
+    color: white;
     transition: background-color 1s;
     background-image: radial-gradient(ellipse farthest-side at bottom, rgba(255, 255, 255, 0.3), transparent);
     height: 100vh;
@@ -116,6 +117,11 @@ body::before {
         spin 300s linear infinite;
 }
 
+app-root {
+    z-index: 100;
+    position: relative;
+}
+
 .icon {
     filter: invert(100%) opacity(80%);
     min-width: 2em;
@@ -127,6 +133,7 @@ body::before {
     background-color: rgba(255, 255, 255, 0.3);
     padding: 1em;
     border-radius: 0.5em;
+    break-inside: avoid;
 }
 
 .box .box-title {

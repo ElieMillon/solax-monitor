@@ -1,13 +1,10 @@
-
-.solar-panel {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 50vw;
-    height: 100vh;
+.desktop {
+    display: flex;
+    margin: 1vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.solar-panel img {
-    width: 100%;
+app-weather {
+    margin: 2em auto;
 }

@@ -4,9 +4,11 @@
 
 export const environment = {
   production: false,
+  deviceAddress: 'solax', // We use a local domain name to resolve on the device, you can change it by the ip address if you known it.
   place: 'Paris, Île-de-France, France',
   degreeType: 'C',
-  weatherRefreshInterval: 20 * 60 * 1000
+  weatherRefreshInterval: 20 * 60 * 1000, // Every 20 minutes
+  productionRefreshInterval: 5 * 1000 // Every 5 seconds
 };
 
 /*
